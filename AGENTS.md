@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- The home page is one pinned scroll scene (`src/components/sugar/`); all scroll choreography lives in `timeline.ts` as pure functions of progress so timings can be tuned in one place.
+- The cube-to-person film is an all-intra (every frame a keyframe) MP4 served as a Lovable asset and scrubbed via `currentTime`; re-encode replacements with `-g 1` or seeking will stutter.
