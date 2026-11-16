@@ -34,9 +34,9 @@ export function videoTimeFor(p: number, duration: number, now = 0) {
   const d = duration;
   let t: number;
   if (p < 0.06) t = lerp(0, 0.5, p / 0.06);
-  else if (p < 0.4) t = lerp(0.5, 3.4, range(p, 0.06, 0.4));
-  else if (p < 0.52) t = lerp(3.4, 6.0, range(p, 0.4, 0.52));
-  else t = lerp(6.0, d - 0.05, range(p, 0.52, 0.88));
+  else if (p < 0.42) t = lerp(0.5, 3.5, range(p, 0.06, 0.42));
+  else if (p < 0.48) t = lerp(3.5, 6.0, range(p, 0.42, 0.48));
+  else t = lerp(6.0, d - 0.05, range(p, 0.48, 0.88));
   // Idle sway of the cube while the visitor rests at the very top
   const rest = 1 - range(p, 0, 0.02);
   const sway = 0.45 * (0.5 - 0.5 * Math.cos(now / 1500));
