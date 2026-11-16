@@ -206,7 +206,7 @@
   background-image: var(--gradient-scene-shade);
 }
 
-@utility text-shadow-scene {
+@utility scene-text-glow {
   text-shadow: var(--shadow-text);
 }
 
